@@ -17,4 +17,4 @@ function ExpenseItem(props) {
   );
 }
 
-export defa
+export default ExpenseItem;
