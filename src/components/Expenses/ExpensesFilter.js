@@ -15,10 +15,9 @@ const ExpensesFilter = (props) => {
       <div className='expenses-filter__control'>
         <label>Filter by Month</label>
         <select value={props.selected} onChange={dropdownChangeHandler}>
-          <option value='03'>March</option>
-          <option value='04'>April</option>
-          <option value='05'>May</option>
-          <option value='06'>June</option>
+          <option value='3'>April</option>
+          <option value='4'>May</option>
+          <option value='5'>June</option>
         </select>
       </div>
     </div>
