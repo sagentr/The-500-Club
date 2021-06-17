@@ -1,28 +1,32 @@
-// import ExpenseItem from "./ExpenseItem";
-//import Expenses from "./Expenses";
 
-// function RewardPoints (props) {
+export const getPoints = (purchaseAmount) => {
 
-// let rewardPoints1 = 0
-// let NewPurchaseAmount = 0;
+((Math.trunc(purchaseAmount)))
 
-//           if(purchaseAmount === 100) {
-//             (rewardPoints1 = 53);
-//           }
-//           else if(purchaseAmount >= 100) {
-//             (newpurchaseAmount = purchaseAmount - 100);
-//             (rewardPoints1 = (newpurchaseAmount * 2) + 50);
-//           } else if (purchaseAmount >= 51 && purchaseAmount <= 100) {
-//               (newPurchaseAmount = purchaseAmount - 50);
-//               (rewardPoints1 = newPurchaseAmount);
-//           } else if (purchaseAmount <= 50) {
-//               (RewardPoints = 0)
-//           }
-//           return rewardPoints1
+let rewardPoints1 = 0
+let NewPurchaseAmount = 0;
 
-// };
+          if((Math.trunc(purchaseAmount)) === 100) {
+            (rewardPoints1 = 53);
+            console.log(rewardPoints1)
+          }
+          else if((Math.trunc(purchaseAmount)) >= 100) {
+            (NewPurchaseAmount = purchaseAmount - 100);
+            (rewardPoints1 = (NewPurchaseAmount * 2) + 50);
+            console.log(rewardPoints1)
+          } else if ((Math.trunc(purchaseAmount)) >= 51 && (Math.trunc(purchaseAmount)) <= 100) {
+              (NewPurchaseAmount = purchaseAmount - 50);
+              (rewardPoints1 = NewPurchaseAmount);
+              console.log(rewardPoints1)
+          } 
+          console.log(purchaseAmount);
+          return (Math.floor(rewardPoints1));
 
-// export default RewardPoints;
+};
+
+
+
+
 // ****************************************************************************************************************************************
 
 //T Do's
