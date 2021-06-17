@@ -1,7 +1,7 @@
 // import react from 'react';
 
 import Expenses from "./components/Expenses/Expenses";
-import NewExpense from "./components/NewExpense.js/NewExpense";
+// import NewExpense from "./components/NewExpense.js/NewExpense";
 
 function App() {
   const mockData = [
@@ -97,14 +97,14 @@ function App() {
     },
   ];
 
-  const addExpenseHandler = (expense) => {
-    console.log("In app.js");
-    console.log(expense);
-  };
+  // const addExpenseHandler = (expense) => {
+  //   console.log("In app.js");
+  //   console.log(expense);
+  // };
 
   return (
     <div>
-      <NewExpense onAddExpense={addExpenseHandler} />
+      {/* <NewExpense onAddExpense={addExpenseHandler} /> */}
       <Expenses mockData={mockData} />
     </div>
   );
