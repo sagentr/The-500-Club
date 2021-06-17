@@ -51,6 +51,10 @@ const NewExpenseForm = () => {
             date: new Date(enteredDate)
         }
         console.log(expenseData);
+        setEnteredAmount('');
+        setEnteredPoints('');
+        setEnteredDate('');
+        
     };
 
     return (
@@ -58,19 +62,29 @@ const NewExpenseForm = () => {
             <div className="new-expense__controls">
                 <div className="new-expense__control">
                     <label>Purchase Amount</label>
-                    <input type="text" onChange={amountChangeHandler}/>
+                    <input 
+                    type="text"
+                    value={enteredAmount}
+                    onChange={amountChangeHandler}/>
                 </div>
             </div>
             <div className="new-expense__controls">
                 <div className="new-expense__control">
                     <label>Reward Points</label>
-                    <input type="number" min="0.01"  step="0.01" onChange={pointsChangeHandler}/>
+                    <input
+                    type="number"
+                    min="0.01"  step="0.01"
+                    value={enteredPoints}
+                    onChange={pointsChangeHandler}/>
                 </div>
             </div>
             <div className="new-expense__controls">
                 <div className="new-expense__control">
                     <label>Date</label>
-                    <input type="date" min="2019-0--01" max="2022-12-31" onChange={dateChangeHandler} />
+                    <input type="date"
+                    min="2019-0--01" max="2022-12-31"
+                    value={enteredDate}
+                    onChange={dateChangeHandler} />
                 </div>
             </div>
             <div className="new-expense_actions">
