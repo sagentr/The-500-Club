@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './NewExpenseForm.css'
 
-const NewExpenseForm = () => {
+const NewExpenseForm = (props) => {
     const [enteredAmount, setEnteredAmount] = useState('');
     const [enteredPoints, setEnteredPoints] = useState('')
     const [enteredDate, setEnteredDate] = useState('');
@@ -50,8 +50,9 @@ const NewExpenseForm = () => {
             points: enteredPoints,
             date: new Date(enteredDate)
         }
-        console.log(expenseData);
-        setEnteredAmount('');
+
+
+        props.onSaveExpenseData(expenseData);
         setEnteredPoints('');
         setEnteredDate('');
         
@@ -90,7 +91,7 @@ const NewExpenseForm = () => {
             <div className="new-expense_actions">
             <button type="submit">Add Expense</button></div>
         </form>
-    )
+    );
 }
 
 export default NewExpenseForm;
