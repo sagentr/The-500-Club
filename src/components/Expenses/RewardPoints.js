@@ -1,4 +1,5 @@
 // import ExpenseItem from "./ExpenseItem";
+//import Expenses from "./Expenses";
 
 // function RewardPoints (props) {
 
@@ -24,7 +25,7 @@
 // export default RewardPoints;
 // ****************************************************************************************************************************************
 
-//TO Do's
+//T Do's
 //configure function so better suited for React, I have it coded in vanilla JS
 // Add in the the handling of decimals so as to only use whole numbers when calculating the RewardPoints
     //some sort of Math.trunc() situation??
