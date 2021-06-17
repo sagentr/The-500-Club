@@ -15,6 +15,7 @@ function ExpenseItem(props) {
         <h2>{props.amount}</h2>
       </div>
       <div className="expense-item__points">{props.points}</div>
+      
     </Card>
   );
 }
