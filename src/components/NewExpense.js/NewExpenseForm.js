@@ -6,22 +6,55 @@ const NewExpenseForm = () => {
     const [enteredPoints, setEnteredPoints] = useState('')
     const [enteredDate, setEnteredDate] = useState('');
 
+//    const [userInput, setUserInput] = useState({
+//         enteredAmount: '',
+//         enteredPoints: '',
+//         enteredDate: '',
+//     });
+
     const amountChangeHandler = (event) => {
         setEnteredAmount(event.target.value);
-        console.log('event.target.value');
 
+        // setUserInput({
+        //     ...userInput,
+        //      enteredAmount: event.target.value,
+           
+        // });
+
+        // setUserInput((prevState) => {
+        //     return {...prevState, enteredAmoung: event.target.value}
+        // })
     };
 
     const pointsChangeHandler = (event) => {
         setEnteredPoints(event.target.value);
-    }
+        // setUserInput({
+        //     ...userInput,
+        //      enteredPoints: event.target.value,
+        //  });
+    }       
 
     const dateChangeHandler = (event) => {
-        setEnteredDate(event.target.value)
+        setEnteredDate(event.target.value);
+        // setUserInput({
+        //     ...userInput,
+        //      enteredDate: event.target.value,
+        // })
     }
 
+    const submitHandler = (event) => {
+        event.preventDefault();
+
+        const expenseData = {
+            amount: enteredAmount,
+            points: enteredPoints,
+            date: new Date(enteredDate)
+        }
+        console.log(expenseData);
+    };
+
     return (
-        <form>
+        <form onSubmit={submitHandler}>
             <div className="new-expense__controls">
                 <div className="new-expense__control">
                     <label>Purchase Amount</label>
