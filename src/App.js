@@ -1,6 +1,7 @@
 // import react from 'react';
 
 import Expenses from "./components/Expenses/Expenses";
+import NewExpense from "./components/NewExpense.js/NewExpense";
 
 
 function App() {
@@ -27,7 +28,7 @@ function App() {
 
   return (
     <div>
-      <h2>Let's get started!</h2>
+      <NewExpense />
       <Expenses mockData={mockData}/>
     </div>
   );
